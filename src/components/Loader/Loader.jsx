@@ -7,13 +7,13 @@ const Loader = () => {
     <LoaderContainer>
       <MagnifyingGlass
         visible={true}
-        height="80"
-        width="80"
+        height="160"
+        width="160"
         ariaLabel="MagnifyingGlass-loading"
         wrapperStyle={{}}
         wrapperClass="MagnifyingGlass-wrapper"
         glassColor="#c0efff"
-        color="#e15b64"
+        color="#3f51b5"
       />
     </LoaderContainer>
   );
