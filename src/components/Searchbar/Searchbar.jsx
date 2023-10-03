@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { ImSearch } from 'react-icons/im';
 import { toast } from 'react-toastify';
 import {
-  StyledSearchbar,
+  StyledSearchBar,
   SearchForm,
   SearchBtn,
   SearchBtnLabel,
   SearchFormInput,
 } from './SearchBar.styled';
 
-export default class Searchbar extends Component {
+export default class SearchBar extends Component {
   state = {
     query: '',
   };
@@ -32,7 +32,7 @@ export default class Searchbar extends Component {
 
   render() {
     return (
-      <StyledSearchbar>
+      <StyledSearchBar>
         <SearchForm onSubmit={this.handleSubmit}>
           <SearchBtn type="submit">
             <ImSearch size="2em" />
@@ -49,7 +49,7 @@ export default class Searchbar extends Component {
             onChange={this.handleQueryChange}
           />
         </SearchForm>
-      </StyledSearchbar>
+      </StyledSearchBar>
     );
   }
 }
