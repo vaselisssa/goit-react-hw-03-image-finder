@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { StyledApp } from './App.styled';
 import SearchBar from 'components/SearchBar';
+import { LoaderContainer } from 'components/Loader/Loader.styled';
 export default class App extends Component {
   state = {
     query: '',
@@ -22,6 +23,7 @@ export default class App extends Component {
           hideProgressBar
           theme="colored"
         />
+        <LoaderContainer />
       </StyledApp>
     );
   }
