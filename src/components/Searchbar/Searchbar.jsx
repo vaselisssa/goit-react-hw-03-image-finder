@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { ImSearch } from 'react-icons/im';
+import { toast } from 'react-toastify';
 import {
   StyledSearchbar,
   SearchForm,
   SearchBtn,
   SearchBtnLabel,
   SearchFormInput,
-} from './Searchbar.styled';
+} from './SearchBar.styled';
 
 export default class Searchbar extends Component {
   state = {
@@ -21,7 +22,7 @@ export default class Searchbar extends Component {
     event.preventDefault();
 
     if (this.state.query.trim() === '') {
-      alert('Enter your query!');
+      toast.warn('Enter your query!');
       return;
     }
 

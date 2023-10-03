@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { StyledApp } from './App.styled';
-import Searchbar from 'components/Searchbar';
+import SearchBar from 'components/SearchBar';
 export default class App extends Component {
   state = {
     query: '',
@@ -14,7 +15,13 @@ export default class App extends Component {
   render() {
     return (
       <StyledApp>
-        <Searchbar onSubmit={this.handleFormSubmit} />
+        <SearchBar onSubmit={this.handleFormSubmit} />
+        <ToastContainer
+          position="top-center"
+          autoClose={2000}
+          hideProgressBar
+          theme="colored"
+        />
       </StyledApp>
     );
   }
